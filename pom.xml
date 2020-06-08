@@ -21,5 +21,16 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>eureka-security-server</module>
+        <module>user-service</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
