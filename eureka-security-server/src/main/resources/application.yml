@@ -1,0 +1,17 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: eureka-security-server
+  security:
+    user: #配置spring security登录用户名密码
+      name: root
+      password: root
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #个人理解，因为自己本身就是注册中心，负责维护服务实例列表，因此无需注册与拉取
+    fetch-registry: false
+    register-with-eureka: false

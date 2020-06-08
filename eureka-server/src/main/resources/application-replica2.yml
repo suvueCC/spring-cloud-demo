@@ -1,0 +1,19 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: replica2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #由于这里使用了域名，涉及到了DNS解析，所以我们这里改一下host文件
+      #127.0.0.1 replica1
+      #127.0.0.1 replica2
+      #然后以两个配置类分别启动一个eureka-server项目
+      defaultZone: http://replica1:8002/eureka/ #注册到另一个eureka注册中心

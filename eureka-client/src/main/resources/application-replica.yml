@@ -1,0 +1,14 @@
+server:
+  port: 8102 #端口
+spring:
+  application:
+    name: eureka-client #指定服务名称
+
+eureka:
+  client:
+    register-with-eureka: true #注册到eureka服务注册中心
+    fetch-registry: true #获取注册实例列表
+    service-url:
+      #同时注册到两个注册中心
+      #以该配置文件启动，客户端会同时注册到两个eureka节点上
+      defaultZone: http://localhost:8002/eureka,http://localhost:8003/eureka
