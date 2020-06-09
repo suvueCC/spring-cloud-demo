@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 //value为user-service表示这是对user-service服务的接口调用客户端。
 //fallback为服务降级时的错误处理类
-@FeignClient(value = "user-service", fallback = UserFallbackServiceImpl.class)
+@FeignClient(value = "user-service", url = "${feign.user-service}", fallback = UserFallbackServiceImpl.class)
 public interface UserService {
 
     @GetMapping("/user/{id}")
