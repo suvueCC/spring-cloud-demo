@@ -24,6 +24,8 @@
         <module>user-service</module>
         <module>ribbon-service</module>
         <module>hystrix-service</module>
+        <module>hystrix-dashboard</module>
+        <module>turbine-service</module>
     </modules>
 
     <dependencyManagement>
