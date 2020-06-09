@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Result<User> insert(@PathVariable Long id) {
+    public Result<User> getById(@PathVariable Long id) {
         final User user = User.builder().id(id).username("米斯特赵").password("123456").build();
         System.out.println("成功获取用户信息："+user);
         return new Result<>(user);
